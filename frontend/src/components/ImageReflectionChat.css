@@ -1,0 +1,42 @@
+.img-reflection {
+    border-radius: var(--radius-lg);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.reflection-header {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.reflection-header p {
+    font-size: 0.8rem;
+    color: var(--clr-text-muted);
+}
+
+.reflection-preview {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    max-height: 240px;
+}
+
+.reflection-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.reflection-input-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.reflection-input-row .input-field {
+    flex: 1;
+    padding: 10px 14px;
+    font-size: 0.85rem;
+}

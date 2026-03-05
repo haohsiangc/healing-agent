@@ -1,0 +1,151 @@
+.login-root {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(ellipse at 30% 40%, rgba(245, 158, 11, 0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 70% 70%, rgba(14, 165, 233, 0.07) 0%, transparent 60%),
+        var(--clr-bg);
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Particles */
+.particles {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.particle {
+    position: absolute;
+    bottom: -20px;
+    left: calc(var(--i) * 5.8%);
+    width: calc(6px + var(--i) * 1.5px);
+    height: calc(6px + var(--i) * 1.5px);
+    border-radius: 50%;
+    background: radial-gradient(circle,
+            hsl(calc(40 + var(--i) * 12), 90%, 65%) 0%,
+            transparent 70%);
+    opacity: 0;
+    animation: particleFloat calc(6s + var(--i) * 0.8s) linear calc(var(--i) * 0.4s) infinite;
+}
+
+.login-card {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 420px;
+    border-radius: var(--radius-xl);
+    padding: 40px 36px;
+    box-shadow: var(--shadow-lg), 0 0 60px rgba(245, 158, 11, 0.06);
+}
+
+/* Hero */
+.login-hero {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.login-logo {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 16px;
+    animation: float 4s ease-in-out infinite;
+}
+
+.login-logo svg {
+    width: 100%;
+    height: 100%;
+}
+
+.login-hero h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--clr-amber-400), var(--clr-sky-400));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+}
+
+.login-hero p {
+    color: var(--clr-text-muted);
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+/* Tabs */
+.login-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    background: var(--clr-surface-2);
+    border-radius: var(--radius-md);
+    padding: 4px;
+    margin-bottom: 28px;
+}
+
+.tab {
+    position: relative;
+    z-index: 1;
+    padding: 9px;
+    border-radius: calc(var(--radius-md) - 2px);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--clr-text-muted);
+    transition: color var(--transition-normal);
+}
+
+.tab.active {
+    color: var(--clr-text);
+}
+
+.tab-indicator {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: calc(50% - 4px);
+    height: calc(100% - 8px);
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(14, 165, 233, 0.15));
+    border-radius: calc(var(--radius-md) - 2px);
+    border: 1px solid rgba(245, 158, 11, 0.3);
+    transition: transform var(--transition-normal);
+}
+
+/* Form */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.field-group label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--clr-text-muted);
+}
+
+.login-error {
+    background: rgba(248, 113, 113, 0.1);
+    border: 1px solid rgba(248, 113, 113, 0.3);
+    color: var(--clr-danger);
+    padding: 10px 14px;
+    border-radius: var(--radius-md);
+    font-size: 0.85rem;
+}
+
+.login-footer {
+    text-align: center;
+    color: var(--clr-text-dim);
+    font-size: 0.75rem;
+    margin-top: 20px;
+}

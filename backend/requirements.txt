@@ -1,0 +1,43 @@
+# Core Framework
+fastapi==0.115.0
+uvicorn[standard]==0.32.0
+python-multipart==0.0.12
+
+# Database
+sqlalchemy==2.0.36
+
+# Auth
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==3.2.2
+
+# Config
+pydantic-settings==2.6.1
+pydantic[email]==2.10.0
+
+# Anthropic
+anthropic>=0.40.0
+
+# NLP / Emotion
+jieba==0.42.1
+pandas==2.2.3
+numpy==1.26.4
+
+# Image processing
+Pillow==10.4.0
+
+# File serving
+aiofiles==24.1.0
+
+# GPU / Image Generation (optional, comment out if no GPU)
+# torch==2.4.1
+# diffusers==0.31.0
+# transformers==4.46.3
+# accelerate==1.2.0
+# safetensors==0.4.5
+# peft==0.13.2
+
+# Testing
+pytest==8.3.4
+httpx==0.28.0
+pytest-asyncio==0.24.0

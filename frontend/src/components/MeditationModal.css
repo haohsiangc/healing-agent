@@ -1,0 +1,77 @@
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 24px;
+}
+
+.modal-card {
+    max-width: 400px;
+    width: 100%;
+    border-radius: var(--radius-xl);
+    padding: 36px 32px;
+    text-align: center;
+    box-shadow: var(--shadow-lg), 0 0 80px rgba(56, 189, 248, 0.1);
+}
+
+/* Ripple decoration */
+.modal-ripple {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ripple-ring {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 2px solid var(--clr-sky-400);
+    opacity: 0;
+    animation: ripple 2.4s ease-out infinite;
+}
+
+.ripple-ring.delay-1 {
+    animation-delay: 0.8s;
+}
+
+.ripple-ring.delay-2 {
+    animation-delay: 1.6s;
+}
+
+.ripple-icon {
+    font-size: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.modal-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, var(--clr-sky-300), var(--clr-sky-400));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.modal-card p {
+    color: var(--clr-text-muted);
+    font-size: 0.875rem;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+.modal-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
